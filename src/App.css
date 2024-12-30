@@ -1,7 +1,8 @@
 .menu-bar{
-	height:6%;
+	height:9%;
 	width:100%;
-	background-color: black;
+	background-color: #ffa500
+	;
 	position: absolute;
 	left: 0%;
 	top: 0%;
@@ -34,6 +35,10 @@ btn1:hover{
     background-color:blue;
 	transition-duration: 0.2s;
 }
+body{
+background-color:#FFF;   
+    background-attachment: fixed;
+}
 
 btn2{
 	position: absolute;
@@ -53,11 +58,11 @@ btn2:hover{
 	position: absolute;
 	color:black;
 	height:42%;
-	width:24%;
+	width:27%;
 	left: 0%;
-	background:gray;
+	background:blue;
 	top: 11%;
-	box-shadow:insert 0m 50m #038c8c;
+	box-shadow:insert 0m 50m #ffa500;
 }
 .gallery {
   position: absolute;
@@ -84,10 +89,10 @@ btn2:hover{
 .Rodape{
 	height:20%;
 	width:100%;
-	background-color: gray;
+	background-color: #ffa500;
 	position: absolute;
 	left: 0%;
-	top: 100%;
+	top: 250%;
 	
 	
 }
@@ -97,7 +102,7 @@ btn2:hover{
 	background-color: black;
 	position: absolute;
 	left: 0%;
-	top: 120%;
+	top: 269%;
 	color:#ffff;
 }
 .Taba{
@@ -111,6 +116,12 @@ height:56%;
 }
 .Pont{
 	position:absolute;
+	  border-radius: 4px;
+	  left:50%;
+	  top:50%;
+	  color:#000;
+	  background-color:#FFF;
+	  border: 2px solid #ccc;
 	left:50%;
 	top:50%;
 }
@@ -126,38 +137,45 @@ input[type=text]{
 btn4{
 	
 	position: absolute;
-	color:#0000;
-	height:98%;
-	width:24%;
-	background:#ffff;
-	left: 156%;
-	top:2%;
+	color:#FFF;
+	height:10%;
+	width:13%;
+	background:blue;
+	text-align: center;
+	font-size:18pt;
+	left: 40%;
+	top:50%;
 	cursor:pointer;
 }
 btn4:hover{
     background-color:gray;
 	transition-duration: 0.2s;
 }
-.ty{
-height:56%;
+.tr{
+	position:absolute;
+    height:56%;
 	width:100%;
-	background-color: gray;
+	background-color: #E7E6FF;
 	position: absolute;
 	left: 0%;
-	top: 6%;
-	background-image:url('https://www.autoindustria.com.br/wp-content/uploads/2023/05/Scania-R450-Plus-1200x640.jpeg');
+	top: 8%;
+	
+}
+.ty{
+	position:absolute;
+    height:56%;
+	width:100%;
+	background-color: #fff;
+	
+	left: 0%;
+	top: 59%;
 }
 .s{
 	cursor:pointer;
 	color:#fff;
 	font-size:14pt;
 }
-.position{
-	position:absolute;
-	left:90%;
-	top:0%;
-	
-}
+
     .sidenav {
         height: 100%;
         width: 0;
@@ -202,7 +220,7 @@ height:56%;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #000;
+  background-color:#ffa500;
 }
 
 li {
@@ -247,16 +265,370 @@ li a:hover {
 }
 .ff{
 
+font-size:14;
+}
+borda34
+{
+	position:absolute;
+	background:gray;
+	height: 45%;
+	left:60%;
+
+		width: 25%;
+	border:2px solid black;
 	
 }
-.borda
+borda
 {
 	position:absolute;
 	background:gray;
 	height: 45%;
 	
-	top:70%;
+	top:10%;
 		width: 25%;
 	border:2px solid black;
 	
+}
+
+.borda1
+{
+	position:absolute;
+	color: #000;
+	border:2px solid #000;
+	height: 50%;
+	font-size:14pt;
+	width: 50%;
+	background:##E0FFFF;
+	left:50%;
+	top:9%;
+	
+	
+}
+borda2{
+	position:absolute;
+  Color: #000;
+  font-size:18pt;
+	left: 40%;
+	top:8%;
+		
+	
+}
+.borda6{
+	top:9%;
+	position:absolute;
+  Color: #000;
+  font-size:14pt;
+	left: 0%;
+	border:2px solid #000;
+	text-align:left;
+	width:50%;
+	height: 50%;
+}
+.back-to-top {
+ background: #fff;
+ cursor: pointer;
+
+ position: fixed;
+ right: 1rem;
+ bottom: 1rem;
+
+ line-height: 0;
+
+ visibility: hidden;
+ opacity: 0;
+
+ transition: 0.3s;
+ transform: translateY(100%);
+}
+
+.back-to-top.show {
+ visibility: visible;
+ opacity: 1;
+ transform: translateY(0);
+}
+.fab{
+  position: fixed;
+  bottom:10px;
+  right:10px;
+}
+
+.fab button{
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  border-radius: 30px;
+  background-color: #cb60b3;
+  border: none;
+  box-shadow: 0 1px 5px rgba(0,0,0,.4);
+  font-size: 24px;
+  color: white;
+    
+  -webkit-transition: .2s ease-out;
+  -moz-transition: .2s ease-out;
+  transition: .2s ease-out;
+}
+
+.fab button:focus{
+  outline: none;
+}
+
+.fab button.main{
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  background-color: #5b19b7;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+}
+
+.fab button.main:before{
+  content: '⏚';
+}
+
+.fab ul{
+  position:absolute;
+  bottom: 0;
+  right: 0;
+  padding:0;
+  padding-right:5px;
+  margin:0;
+  list-style:none;
+  z-index:10;
+  
+  -webkit-transition: .2s ease-out;
+  -moz-transition: .2s ease-out;
+  transition: .2s ease-out;
+}
+
+.fab ul li{
+  display: flex;
+  justify-content: flex-start;
+  position: absolute;
+  margin-bottom: -10%;
+  opacity: 0;
+  
+  -webkit-transition: .3s ease-out;
+  -moz-transition: .3s ease-out;
+  transition: .3s ease-out;
+}
+
+.fab ul li label{
+  margin-right:10px;
+  white-space: nowrap;
+  display: block;
+  margin-top: 10px;
+  padding: 5px 8px;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,.2);
+  border-radius:3px;
+  height: 18px;
+  font-size: 16px;
+  pointer-events: none;
+  opacity:0;
+  
+  -webkit-transition: .2s ease-out;
+  -moz-transition: .2s ease-out;
+  transition: .2s ease-out;
+}
+
+.fab button.main:active,
+.fab button.main:focus{
+  outline: none;
+  background-color: #7716ff;
+  box-shadow: 0 3px 8px rgba(0,0,0,.5);
+ }
+ 
+.fab button.main:active:before,
+.fab button.main:focus:before{
+  content: '↑';
+}
+
+.fab button.main:active + ul,
+.fab button.main:focus + ul{
+  bottom: 70px;
+}
+
+.fab button.main:active + ul li,
+.fab button.main:focus + ul li{
+  margin-bottom: 10px;
+  opacity: 1;
+}
+
+.fab button.main:active + ul li:hover label,
+.fab button.main:focus + ul li:hover label{
+  opacity: 1;
+}
+.wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(52, 52, 52);
+  background: linear-gradient(
+    90deg,
+    rgba(52, 52, 52, 1) 0%,
+    rgba(97, 119, 255, 1) 0%,
+    rgba(33, 57, 189, 1) 100%
+  );
+}
+ 
+.wrapper a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 3px;
+  text-transform: uppercase;
+  color: #585858;
+  font-family: "Roboto", sans-serif;
+}
+.content {
+  border-radius: 4px;
+  position: relative;
+  width: 500px;
+  max-width: 90%;
+  background: #fff;
+  padding: 1em 2em;
+}
+ 
+.footer {
+  text-align: right;
+  margin-top: 50px;
+}
+ 
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #585858;
+  text-decoration: none;
+}
+ 
+.footer-btn-close {
+  width: 150px;
+  padding: 10px;
+  text-decoration: none;
+  background-color: #cfcca8;
+  color: #000000;
+  border-radius: 3px;
+}
+faa{
+	position:absolute;
+    height:68%;
+	width:27%;
+	background-color: #E7E6FF;
+	
+	left: 4%;
+	top: 8%;
+	
+	
+}
+p{
+	font-size:18pt;
+	text-align:center;
+	color: blue;
+}
+fa{
+	position:absolute;
+    height:68%;
+	width:27%;
+	background-color: #E7E6FF;
+	
+	left: 50%;
+	top: 8%;
+	
+	
+}
+.Bor{
+position:absolute;
+    height:56%;
+	width:100%;
+	background-color: #E7E6FF;
+	
+	left: 0%;
+	top: 114%;
+	
+}
+.for{
+	position:absolute;
+    height:84%;
+	width:100%;
+	background-color: #ffff;
+	
+	left: 0%;
+	top: 166%;
+	
+	
+}
+.round3 {
+  border: 2px solid gray;
+  border-radius: 50% 50%;
+ 	margin-left: 5%;
+  height:20%;
+  width:10%;
+  background-color:gray;
+}
+.round2 {
+  border: 2px solid gray;
+  border-radius: 50% 50%;
+ 	margin-left: 18%;
+  height:20%;
+  width:10%;
+  background-color:gray;
+}
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.login-form {
+  background-color: #ffffff;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+.login-form h2 {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: orange;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #0056b3;
 }
