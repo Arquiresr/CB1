@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { useState } from "react";
+
 import Home from './Principal'; // Página principal (depois de autenticação)
 import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
@@ -70,14 +71,18 @@ const Login = ({ onNavigate }) => {
         <ff type="button" onClick={() => onNavigate('form')}>
           Não tem conta? Cadastre-se
         </ff>
+			  <br />
+		  Criado por MAMUTE co.
       </form>
+
+	
     </div>
   );
 };
 
 const Form = ({ onNavigate }) => {
   const [formData, setFormData] = useState({
-    name: "",
+    nome: "",
     email: "",
     cpf: "",
     password: "",
@@ -101,7 +106,7 @@ const Form = ({ onNavigate }) => {
 
       await addDoc(collection(db, "Empresa"), {
         uid: user.uid,
-        name: formData.name,
+        nome: formData.nome,
         email: formData.email,
         cpf: formData.cpf,
 		Senha: formData.password,
@@ -121,7 +126,7 @@ const Form = ({ onNavigate }) => {
         <label htmlFor="name">Nome Completo:</label>
         <input
           type="text"
-          id="name"
+          id="nome"
           value={formData.name}
           onChange={handleChange}
           required
@@ -175,6 +180,7 @@ const App = () => {
     if (currentScreen === 'home') {
       return <Home />;
     }
+	
   };
 
   return <div className="app-container">{renderScreen()}</div>;

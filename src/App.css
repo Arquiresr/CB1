@@ -8,6 +8,48 @@
 	top: 0%;
 	
 }
+.font1{
+	position:absolute;
+	left:40%;
+	top:8%;
+	font-size:18pt;
+	Color:#000;
+}
+.font2{
+	position:absolute;
+	left:40%;
+	top:12%;
+	font-size:18pt;
+	Color:#000;
+}
+.font3{
+	position:absolute;
+	left:40%;
+	top:16%;
+	font-size:18pt;
+	Color:#000;
+}
+.font4{
+	position:absolute;
+	left:51%;
+	top:8%;
+	font-size:18pt;
+	Color:#000;
+}
+.font5{
+	position:absolute;
+	left:51%;
+	top:12%;
+	font-size:18pt;
+	Color:#000;
+}
+.font6{
+	position:absolute;
+	left:0%;
+	top:0%;
+	font-size:18pt;
+	Color:#000;
+}
 btn{
 	position: absolute;
 	color:#FFFF;
@@ -133,6 +175,31 @@ input[type=text]{
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+}
+textarea{
+  width: 49%;
+ height:30%;
+  
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=file]{
+	font-size:14pt;
+	color:blue;
+	cursor:pointer;
+}
+fieldset{
+	
+		position:absolute;
+    height:80%;
+	width:50%;
+	background-color: ##f1ffff;
+	position: absolute;
+	left: 28%;
+	top: 10%;
+	  border: 2px solid #ccc;
 }
 btn4{
 	
@@ -267,6 +334,9 @@ li a:hover {
 
 font-size:14;
 }
+ff:hover{
+	cursor:pointer;
+}
 borda34
 {
 	position:absolute;
@@ -278,15 +348,31 @@ borda34
 	border:2px solid black;
 	
 }
-borda
+aaaaa{
+	position: absolute;
+	color:#FFF;
+	height:10%;
+	width:23%;
+	background:blue;
+	text-align: center;
+	font-size:18pt;
+	left: 40%;
+	top:50%;
+	cursor:pointer;
+	
+}
+aaaaa:hover{
+    background-color:gray;
+transition-duration: 0.2s;}
+.borda
 {
 	position:absolute;
-	background:gray;
-	height: 45%;
-	
-	top:10%;
-		width: 25%;
-	border:2px solid black;
+	background:#FFFF;
+	height: 80%;
+	left:0%;
+	top:9%;
+		width: 100%;
+	border:2px solid gray;
 	
 }
 
@@ -294,7 +380,6 @@ borda
 {
 	position:absolute;
 	color: #000;
-	border:2px solid #000;
 	height: 50%;
 	font-size:14pt;
 	width: 50%;
@@ -304,13 +389,15 @@ borda
 	
 	
 }
-borda2{
+.borda2{
 	position:absolute;
   Color: #000;
   font-size:18pt;
-	left: 40%;
-	top:8%;
-		
+	left: 0%;
+	top:0%;
+   height: 90%;
+		width: 40%;	
+		border: 1px solid #000;
 	
 }
 .borda6{
@@ -319,10 +406,10 @@ borda2{
   Color: #000;
   font-size:14pt;
 	left: 0%;
-	border:2px solid #000;
+	
 	text-align:left;
 	width:50%;
-	height: 50%;
+	height: 70%;
 }
 .back-to-top {
  background: #fff;
