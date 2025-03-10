@@ -12,7 +12,7 @@ import MyImage from './procurar.png';
 import MyImage1 from './aas.png';
 import { getFirestore,query, doc, getDoc,collection, getDocs,setDoc,addDoc,where } from "firebase/firestore";
 import { initializeApp } from "firebase/app";
-
+import { Card, CardContent } from "./components/ui/card";
 import InputMask from 'react-input-mask';
 
 const UploadImagem = () => {
@@ -164,13 +164,35 @@ const Perfil = ({ onNavigate }) => {
 // Componente Título
 const Titulo = ({ onNavigate }) => {
   return (
-    <div>
-      <MyButton onNavigate={onNavigate} />
-      <Das />
-      <div className="borda1">
-        <img src={p} alt="Logo" width="300px" height="300px" />
-      </div>
-      <FavoriteColor />
+    <div className="flex flex-col min-h-screen">
+    
+      <header className="bg-orange-500 text-white p-4 w-full fixed top-0 left-0 z-50">
+        <MyButton onNavigate={onNavigate} />
+      </header>
+
+      {/* Espaço para evitar sobreposição do cabeçalho */}
+      <div className="mt-20"></div>
+
+      {/* Conteúdo principal cresce para empurrar o rodapé para baixo */}
+      <main className="flex-grow p-6 bg-gray-100">
+        <Das />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="borda1">
+            <img 
+              src={p} 
+              alt="Logo" 
+              width="300px" 
+              height="300px" 
+              className="p-4 border rounded shadow-lg bg-white" 
+            />
+          </div>
+        </div>
+      </main>
+      
+      {/* Rodapé sempre no final da tela */}
+      <footer className="main bg-gray-1000 text-white p-7  fixed bottom-100 left-100">
+        <FavoriteColor />
+      </footer>
     </div>
   );
 };
@@ -277,7 +299,7 @@ const Meu_servico= ({ onNavigate }) =>{
   }, []);
 
   const fetchUserData = async (uid) => {
-    const q = query(collection(db, "colecoes"), where ("criadoPor", "==", uid));
+    const q = query(collection(db, "Servico"), where ("criadoPor", "==", uid));
     const querySnapshot = await getDocs(q);
 
     const items = querySnapshot.docs.map((doc) => ({
@@ -290,6 +312,26 @@ const Meu_servico= ({ onNavigate }) =>{
 	return(
 	<div>
 	    <MyButton onNavigate={onNavigate} />
+      <div className="p-6">
+      <h2 className="text-xl font-semibold mb-4">Minhas Informações</h2>
+      {data.length === 0 ? (
+        <p>Nenhum dado encontrado.</p>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {data.map((item) => (
+            <Card key={item.id} className="p-4 shadow-lg">
+              <CardContent>
+                <h3 className="text-lg font-bold">{item.Nome}</h3>
+                <p className="text-sm text-gray-600">{item.desc}</p>
+                <p className="text-xs text-gray-400">
+                  Criado em: {new Date(item.criadoEm.seconds * 1000).toLocaleString()}
+                </p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      )}
+    </div>
       <FavoriteColor />
     </div>
   );
